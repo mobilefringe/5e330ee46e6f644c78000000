@@ -47,7 +47,7 @@ require.config({
         //google map dependcies
         'google-map-api': 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCukCjH3fsuDYBdI44hZKL43m60jEToJjY',
         'google_map': 'https://mmvue.codecloudapp.com/google_map.vue?noext',
-        'campaignMonitor': 'https://js.createsend1.com/javascript/copypastesubscribeformlogic'
+        'campaignMonitor': 'https://js.createsend1.com/javascript/copypastesubscribeformlogic',
     }
 });
 
