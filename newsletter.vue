@@ -13,7 +13,8 @@
                         <div class="col-md-12">
                             <breadcrumb></breadcrumb>
                             <div v-if="pageContent" v-html="pageContent.body"></div>
-                            <form class="newsletter_form form-horizontal" action="//mobilefringe.createsend.com/t/d/s/urlyhl/" method="post">
+                            <form class="newsletter_form form-horizontal" action="https://www.createsend.com/t/subscribeerror?description=" method="post"
+                                data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1AD10EB25B1E23DC984139C444822ACBD6F30D2EE9E818178B0BA0C25B195ACAFAB30D0D4B61CF52CDF997A100C09CDCC7">
                                 <div class="row">
                                     <div class="col-sm-6" >
                                         <label for="fieldzkydut" class="visuallyhidden">First Name</label>
@@ -21,13 +22,13 @@
                                     </div>
                                     <div class="col-sm-6" >
                                         <label for="fieldzkydui" class="visuallyhidden">Last Name</label>
-                                        <input v-model="form_data.last_name" required class="margin_20 form-control" id="fieldykhdjrr" name="cm-f-ykhdjrr" type="text" placeholder="Last Name">
+                                        <input v-model="form_data.last_name" required class="margin_20 form-control" id="fieldyulldrl" name="cm-f-yulldrl" type="text" placeholder="Last Name">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <label for="newsletter_email" class="visuallyhidden">Email</label>
-                                        <input v-model="form_data.email" required class="margin_20 form-control" name="cm-urlyhl-urlyhl" type="email" placeholder="Email" id="newsletter_email">
+                                        <input v-model="form_data.email" required class="margin_20 form-control" name="cm-ulhikt-ulhikt" type="email" placeholder="Email" id="newsletter_email">
                                     </div>
                                 </div>
                                 <div class="row">
