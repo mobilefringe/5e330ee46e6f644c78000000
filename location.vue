@@ -90,9 +90,7 @@
                     'findRepoByName'
                 ]),
                 getPropertyAddress() {
-                    console.log("address", this.property.name + ' ' + this.property.address1 + ' ' + this.property.city + ' ' + this.property.country + ' ' +this.property.province_state + ' ' + this.property.province_state)
-                    // return this.property.name + ' ' + this.property.address1 + ' ' + this.property.city + ' ' + this.property.country + ' ' +this.property.province_state + ' ' + this.property.province_state
-                    return this.property.name 
+                    return this.property.name + ' ' + this.property.address1 + ' ' + this.property.city + ' ' + this.property.country + ' ' +this.property.province_state + ' ' + this.property.province_state
                 }
             },
             methods: {
@@ -107,6 +105,7 @@
                 },
                 propertyAddress() {
                     var address = this.property.name + "+" + this.property.address1 + "+" + this.property.city + "+" + this.property.province_state + "+" + this.property.country + this.property.postal_code
+                    console.log("address", address)
                     var key ="AIzaSyCukCjH3fsuDYBdI44hZKL43m60jEToJjY"
                     var src = "https://www.google.com/maps/embed/v1/place?q=" + address + "&key="+ key
                     return src
