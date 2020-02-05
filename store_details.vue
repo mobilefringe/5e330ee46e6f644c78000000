@@ -39,7 +39,7 @@
                                             <span class="hours_list_day">{{hour.day_of_week | moment("dddd", timezone)}} </span><span class="hours_list_time">{{hour.open_time | moment("h:mma", timezone)}} - {{hour.close_time | moment("h:mma", timezone)}}</span>
                                         </div>
                                         <div v-else>
-                                            <span class="hours_list_day">{{hour.day_of_week | moment("dddd", timezone)}} </span>CLOSED
+                                            <span class="hours_list_time">{{hour.day_of_week | moment("dddd", timezone)}} </span>CLOSED
                                         </div>
                                     </li>
                                     <li class="hours_vary">*Hours may vary</li>
