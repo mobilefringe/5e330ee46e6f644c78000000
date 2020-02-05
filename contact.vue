@@ -114,7 +114,9 @@
                     }
                     
                     this.main = response[0].data
+                    console.log("Main: " + this.main);
                     this.contactInfo = response[0].data.subpages[0];
+                    console.log("contactInfo: " + this.contactInfo);
                     this.dataLoaded = true;
                 });
             },
