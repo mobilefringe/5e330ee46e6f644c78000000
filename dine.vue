@@ -205,7 +205,7 @@
                     var subcategories = [];
                     if (dining_cat !== null && dining_cat !== undefined) {
                         //dining_cat.id
-                       subcategories = vm.findSubcategoriesByParentID(dining_cat.id);
+                       subcategories = vm.findSubcategoriesByParentID(dining_cat);
                        console.log("Dining Cat subcategories : " + subcategories);
                     }
                     
