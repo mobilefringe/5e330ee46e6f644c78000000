@@ -73,7 +73,7 @@
                     <div class="row hidden-xs margin_60">
                         <div class="col-md-8 col-md-offset-2">
                             <div class="insta-feed-container">
-                                <div class="insta-feed-image " v-for="(item, index) in instaFeed">
+                                <div class="insta-feed-image " v-for="(item, index) in instaFeed" v-if="instaFeed">
                                     <a :href="item.link" target="_blank" :aria-label="'View Post on Instagram: ' + item.caption.text">
                                         <div class="insta-img" v-bind:style="{ 'background-image': 'url(' + item.images.standard_resolution.url + ')' }"></div>
                                         <div class="insta_content">
@@ -89,7 +89,7 @@
                     <div class="visible-xs margin_60 insta-feed-container">
                         <div class="insta_prev"></div>
                         <slick ref="slick" :options="instaOptions">
-                            <div class="insta-feed-image " v-for="(item, index) in instaFeed">
+                            <div class="insta-feed-image " v-for="(item, index) in instaFeed" v-if="instaFeed">
                                 <a :href="item.link" target="_blank" :aria-label="'View Post on Instagram: ' + item.caption.text">
                                     <div class="insta-img" v-bind:style="{ 'background-image': 'url(' + item.images.standard_resolution.url + ')' }"></div>
                                     <div class="insta_content">
