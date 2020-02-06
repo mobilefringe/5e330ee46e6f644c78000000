@@ -201,12 +201,9 @@
                     
                     var dining_cat =  _.find(this.processedCategories, function(o) { return o.name == "Dining"});
                     dining_cat = this.dineFilter;
-                    console.log("Dining Cat : " + dining_cat);
                     var subcategories = [];
                     if (dining_cat !== null && dining_cat !== undefined) {
-                        //dining_cat.id
                        subcategories = vm.findSubcategoriesByParentID(dining_cat);
-                       console.log("Dining Cat subcategories : " + subcategories);
                     }
                     
                     subcategories = _.map(subcategories, 'name').sort();
