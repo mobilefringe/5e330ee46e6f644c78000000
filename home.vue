@@ -70,10 +70,10 @@
                         </div>
                     </div>
                     <h2 class="home_title center" v-if="instaFeed.length > 0">In Our Feed</h2>
-                    <div class="row hidden-xs margin_60">
+                    <div class="row hidden-xs margin_60" v-if="instaFeed.length > 0">
                         <div class="col-md-8 col-md-offset-2">
                             <div class="insta-feed-container">
-                                <div class="insta-feed-image " v-for="(item, index) in instaFeed" v-if="instaFeed.length > 0">
+                                <div class="insta-feed-image " v-for="(item, index) in instaFeed">
                                     <a :href="item.link" target="_blank" :aria-label="'View Post on Instagram: ' + item.caption.text">
                                         <div class="insta-img" v-bind:style="{ 'background-image': 'url(' + item.images.standard_resolution.url + ')' }"></div>
                                         <div class="insta_content">
@@ -86,7 +86,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="visible-xs margin_60 insta-feed-container">
+                    <div class="visible-xs margin_60 insta-feed-container" v-if="instaFeed.length > 0">
                         <div class="insta_prev"></div>
                         <slick ref="slick" :options="instaOptions">
                             <div class="insta-feed-image " v-for="(item, index) in instaFeed" v-if="instaFeed">
