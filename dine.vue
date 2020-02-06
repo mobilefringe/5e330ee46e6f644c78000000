@@ -198,10 +198,9 @@
                 },
                 dropDownCats() {
                     var vm = this;
-                    console.log("processedCategories : " + this.processedCategories);
                     
-                    var dining_cat =  _.find(this.processedCategories, function(o) { return _.toNumber(o.id) == this.dineFilter});
-                    //dining_cat = this.dineFilter;
+                    var dining_cat =  _.find(this.processedCategories, function(o) { return o.name == "Dining"});
+                    dining_cat.id = this.dineFilter;
                     console.log("Dining Cat : " + dining_cat);
                     var subcategories = [];
                     if (dining_cat !== null && dining_cat !== undefined) {
