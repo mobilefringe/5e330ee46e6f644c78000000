@@ -171,6 +171,7 @@
             created(){
                 this.loadData().then(response => {
                     var socialFeed = response[3].data;
+                    if(socialFeed) {
                     var social_feed = socialFeed.social.instagram;
                     this.instaFeed = _.slice(social_feed, [0], [6]);
                     this.instaFeed.map(insta => {
@@ -180,6 +181,7 @@
                     });
                     
                     this.meta = this.findMetaDataByPath(this.$route.path);
+                    }
                     this.dataLoaded = true;  
                 });
             },
