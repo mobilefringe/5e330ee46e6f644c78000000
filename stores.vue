@@ -213,12 +213,10 @@
                 },
                 filterByCategory() {
                     category_id = this.selectedCat;
-                    console.log("selectedCat : " + this.selectedCat);
                     if (category_id == "All" || category_id == null || category_id == undefined) {
                         category_id = "All";
                     } else {
                         category_id = this.findCategoryByName(category_id).id;
-                        console.log("category_id : " + category_id);
                     }
 
                     if (category_id == "All") {
