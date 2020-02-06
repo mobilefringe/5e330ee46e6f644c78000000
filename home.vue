@@ -73,7 +73,7 @@
                     <div class="row hidden-xs margin_60">
                         <div class="col-md-8 col-md-offset-2">
                             <div class="insta-feed-container">
-                                <div class="insta-feed-image " v-for="(item, index) in instaFeed" v-if="instaFeed">
+                                <div class="insta-feed-image " v-for="(item, index) in instaFeed" v-if="instaFeed.length > 0">
                                     <a :href="item.link" target="_blank" :aria-label="'View Post on Instagram: ' + item.caption.text">
                                         <div class="insta-img" v-bind:style="{ 'background-image': 'url(' + item.images.standard_resolution.url + ')' }"></div>
                                         <div class="insta_content">
