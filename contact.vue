@@ -14,14 +14,14 @@
                             <breadcrumb></breadcrumb>
                         </div>
                     </div>
-                    <!--<div class="row" v-if="main.body.length">
+                    <!--<div class="row" v-if="main.body.length ">
                         <div class="col-md-12">
                             <div class="margin_60" v-html="main.body"></div>
                         </div>
                     </div>-->
                     <div class="row">
                         <div class="col-md-4">
-                            <div v-if="main.body.length" class="margin_60 padding_60" v-html="main.body"></div>    
+                            <div v-if="contactInfo.body.length" class="margin_60 padding_60" v-html="main.body"></div>    
                         </div>
                         <div class="col-md-8">
                             <transition name="fadeIn">
@@ -130,8 +130,10 @@
                 loadData: async function () {
                     this.property.mm_host = this.property.mm_host.replace("http:", "");
                     try {
-                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/"+ siteInfo.subdomain + "-contact-us.json" }), this.$store.dispatch("getData", "repos")]);
-                        console.log("Context : " + results);
+                        let results = await Promise.all([
+                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/"+ siteInfo.subdomain + "-contact-us.json" }), 
+                            this.$store.dispatch("getData", "repos")
+                        ]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
