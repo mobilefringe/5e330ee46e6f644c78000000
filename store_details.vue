@@ -284,7 +284,13 @@
                     floor_1.show = true;
                     floor_list.push(floor_1);
                     return floor_list;
-                }
+                },
+                getPNGurl () {
+                    return "https://www.mallmaverick.com" + this.property.map_url;
+                },
+                pngMapRef() {
+                    return this.$refs.pngmapref;
+                },
             },
             methods: {
                 loadData: async function () {
