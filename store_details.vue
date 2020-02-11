@@ -49,7 +49,7 @@
                         <div class="col-md-8">
                             <div id="map" class="margin_20">
                                 <mapplic-map ref="svgmap_ref" :height="300" :minimap= "false" :deeplinking="false" :sidebar="false" :hovertip="true" :maxscale= "5" :storelist="processedStores" :floorlist="floorList" :svgWidth="1500" :svgHeight="1500" @updateMap="updateSVGMap" :key="currentStore.id"></mapplic-map>
-                                
+                              <mapplic-png-map ref="pngmap_ref" :height="314" :hovertip="true" :storelist="allStores" :floorlist="floorList" :svgWidth="property.map_image_width" :svgHeight="property.map_image_height" @updateMap="updatePNGMap" id="store_details_map"></mapplic-png-map>  
                             </div>
                             <div class=" margin_30 store_details_desc" v-html="currentStore.rich_description"></div>
                             <div v-if="this.currentStore.events">
@@ -316,8 +316,12 @@
                     this.svgMapRef.showLocation(this.currentStore.svgmap_region);
                     this.svgMapRef.addActiveClass(this.currentStore.svgmap_region);
                 },
+                updatePNGMap(map) {
+                    this.map = map;
+                    this.dropPin(this.currentStore);
+                },
                 dropPin(store) {
-                    this.svgMapRef.showLocation(store.svgmap_region);
+                    this.$refs.pngmap_ref.showLocation(store.id);
                 },
                 isMultiDay(item) {
                     var timezone = this.timezone
