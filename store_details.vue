@@ -139,7 +139,7 @@
 </style>
 
 <script>
-    define(["Vue", "vuex", "moment", "vue!mapplic-map", "json!site.json"], function (Vue, Vuex, moment, MapplicComponent, siteInfo) {
+    define(["Vue", "vuex", "moment", "vue!mapplic-png-map", "json!site.json"], function (Vue, Vuex, moment, MapplicComponent, siteInfo) {
         return Vue.component("store-details-component", {
             template: template, // the variable template will be injected,
             props: ['id'],
