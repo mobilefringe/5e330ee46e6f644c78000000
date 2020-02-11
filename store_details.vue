@@ -311,6 +311,7 @@
                 },
                 updateSVGMap(map) {
                     this.map = map;
+                    console.log("currentStore : " + this.currentStore);
                     console.log("MAP : " + this.currentStore.svgmap_region);
                     this.svgMapRef.showLocation(this.currentStore.svgmap_region);
                     this.svgMapRef.addActiveClass(this.currentStore.svgmap_region);
