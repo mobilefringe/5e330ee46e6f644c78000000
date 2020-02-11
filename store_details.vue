@@ -48,7 +48,6 @@
                         </div>
                         <div class="col-md-8">
                             <div id="map" class="margin_20">
-                                <mapplic-map ref="svgmap_ref" :height="300" :minimap= "false" :deeplinking="false" :sidebar="false" :hovertip="true" :maxscale= "5" :storelist="processedStores" :floorlist="floorList" :svgWidth="1500" :svgHeight="1500" @updateMap="updateSVGMap" :key="currentStore.id"></mapplic-map>
                               <mapplic-png-map ref="pngmap_ref" :height="314" :hovertip="true" :storelist="allStores" :floorlist="floorList" :svgWidth="1500" :svgHeight="1500" @updateMap="updatePNGMap" id="store_details_map"></mapplic-png-map>  
                             </div>
                             <div class=" margin_30 store_details_desc" v-html="currentStore.rich_description"></div>
@@ -277,20 +276,13 @@
                 // }
                 floorList () {
                     var floor_list = [];
-                    // Get SVG Maps from Repo
-                    var floor_maps_repo = this.findRepoByName('SVG Map');
-                    if(floor_maps_repo !== null && floor_maps_repo !== undefined && floor_maps_repo.images.length > 0){
-                        floor_maps = floor_maps_repo.images;
-                        if (this.currentStore.z_coordinate == 1) {
-                            var floor_1 = {};
-                            floor_1.id = "first-floor";
-                            floor_1.title = "Level 1";
-                            floor_1.map = _.find(floor_maps, function(o){ return _.toNumber(o.id) == _.toNumber(42816);}).image_url;
-                            floor_1.z_index = 1;
-                            floor_1.show = true;
-                            floor_list.push(floor_1);
-                        }
-                    }
+                    var floor_1 = {};
+                    floor_1.id = "first-floor";
+                    floor_1.title = "Level One";
+                    floor_1.map = this.getPNGurl;
+                    floor_1.z_index = 1;
+                    floor_1.show = true;
+                    floor_list.push(floor_1);
                     return floor_list;
                 }
             },
