@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="location_image_container">
-                Mithun
+                Mithun - {{pageImages.length}}
                     <div class="location_image" v-if="pageImages" v-for="item in pageImages">
                     {{item.image_url}}
                         <img :src="item.image_url" alt="item.id" class="img_max" />   
