@@ -28,7 +28,7 @@
                     <div class="footer_links">
                         <p><a href="/pages/seacliff-privacy-policy" target="_blank">Privacy Policy</a></p>
                     </div>
-                    <p>CMC: 714-259-9090</p>
+                    <p>714-259-9090</p>
                 </div>
             </div>
             <div class="copyright">
