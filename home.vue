@@ -197,8 +197,8 @@
                 homeBanners() {
                     var banners = [];
                     var banner = {
-                        'image_url': '//codecloud.cdn.speedyrails.net/sites/5e330ee46e6f644c78000000/image/jpeg/1580141724000/sv_home_1920x470_1.jpg',
-                        'url': '//codecloud.cdn.speedyrails.net/sites/5e330ee46e6f644c78000000/image/jpeg/1580141724000/sv_home_1920x470_1.jpg'
+                        'image_url': '//codecloud.cdn.speedyrails.net/sites/5e330ee46e6f644c78000000/image/jpeg/1580141724000/sv_home_1920x470_2.jpg',
+                        'url': '//codecloud.cdn.speedyrails.net/sites/5e330ee46e6f644c78000000/image/jpeg/1580141724000/sv_home_1920x470_2.jpg'
                     };
                     banners.push(banner);
                     //need changes
