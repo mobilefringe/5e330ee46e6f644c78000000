@@ -176,7 +176,7 @@
                     this.updateCurrentStore(this.$route.params.id);
                 },
                 currentStore: function () {
-                    this.currentStore.zoom = 1;
+                    this.currentStore.zoom = 0.5;
                     
                     if (_.includes(this.currentStore.store_front_url_abs, 'missing')) {
                         this.currentStore.no_logo = true
