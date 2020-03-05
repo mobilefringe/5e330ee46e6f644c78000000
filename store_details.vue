@@ -248,7 +248,7 @@
                 ]),
                 allStores() {
                     this.processedStores.map(function(store){
-                        store.zoom = 1;
+                        store.zoom = 0.5;
                     })
                     return this.processedStores;
                 },
