@@ -263,6 +263,6 @@
 
 <style scoped>
     .dropdown-menu li a {
-        text-transform: capitalize;
+        text-transform: lowercase;
     }
 </style>
