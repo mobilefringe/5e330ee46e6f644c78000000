@@ -192,6 +192,7 @@
                     
                     _.forEach(subcategories, function(value, key) {
                         console.log(value)
+                        _.capitalize(value)
                     });
                     // subcategories = _.capitalize(subcategories)
                     
