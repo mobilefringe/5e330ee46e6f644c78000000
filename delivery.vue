@@ -189,20 +189,14 @@
                     }
                     subcategories = _.filter(subcategories, function(o) { return o.store_ids !== null});
                     
-                    console.log(subcategories)
-                    _.forEach(subcategories, function(value, key) {
-                        value.name = _.capitalize(value.name)
+                    // console.log(subcategories)
+                    // _.forEach(subcategories, function(value, key) {
+                    //     value.name = _.capitalize(value.name)
                        
-                    });
+                    // });
                     
                     
                     subcategories = _.map(subcategories, 'name').sort();
-                    
-             
-                    // subcategories = _.capitalize(subcategories)
-                    
-
-                    
                     subcategories.unshift('All Cuisine');
                     return subcategories;
                 },
