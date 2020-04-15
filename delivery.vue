@@ -189,6 +189,7 @@
                     }
                     subcategories = _.filter(subcategories, function(o) { return o.store_ids !== null});
                     subcategories = _.map(subcategories, 'name').sort();
+                    subcategories = _.capitalize(subcategories)
                     
                     // _.capitalize('FRED');
                     
