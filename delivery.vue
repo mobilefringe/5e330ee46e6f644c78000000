@@ -183,6 +183,7 @@
                 dropDownCats() {
                     var vm = this;
                     var delivery_cat =  _.find(this.processedCategories, function(o) { return o.name == "Delivery"});
+                    console.log(delivery_cat)
                     var subcategories = [];
                     if (delivery_cat !== null && delivery_cat !== undefined) {
                        subcategories = vm.findSubcategoriesByParentID(delivery_cat.id);
