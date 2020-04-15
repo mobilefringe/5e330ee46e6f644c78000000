@@ -23,7 +23,7 @@
         		                </div>    
         		            </router-link>
         		        </div>
-        		        <div class="col-md-6 clearfix">
+        		        <div class="col-md-6 clearfix delivery-filter">
         		            <div class="store_search">
             					<search-component :list="allStores" placeholder="Search" suggestion-attribute="name" v-model="search_result" @select="onOptionSelect" class="text-left">
             						<template slot="item" scope="option" class="manual">
