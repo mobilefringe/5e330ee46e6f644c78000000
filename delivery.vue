@@ -188,7 +188,6 @@
                        subcategories = vm.findSubcategoriesByParentID(delivery_cat.id);
                     }
                     subcategories = _.filter(subcategories, function(o) { return o.store_ids !== null});
-                    console.log(subcategories)
                     _.forEach(subcategories, function(value, key) {
                         value.name = _.capitalize(value.name)
                        
