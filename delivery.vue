@@ -260,9 +260,3 @@
         });
     });
 </script>
-
-<style scoped>
-    .dropdown-menu li {
-        text-transform: lowercase !important;
-    }
-</style>
