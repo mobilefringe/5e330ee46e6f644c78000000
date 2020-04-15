@@ -194,7 +194,7 @@
                         value.name = _.capitalize(value.name)
                        
                     });
-                    c
+                    
                     
                     subcategories = _.map(subcategories, 'name').sort();
                     
@@ -266,3 +266,9 @@
         });
     });
 </script>
+
+<style scoped>
+    .dropdown-menu li a {
+        text-transform: capitalize;
+    }
+</style>
