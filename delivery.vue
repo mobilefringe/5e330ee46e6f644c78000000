@@ -206,6 +206,8 @@
                               value.delivery_store = false
                             }
                             
+                            console.log(value)
+                            
                             
                             
                             store_list.push(value);
