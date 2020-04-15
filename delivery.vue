@@ -191,8 +191,9 @@
                     subcategories = _.map(subcategories, 'name').sort();
                     
                     _.forEach(subcategories, function(value, key) {
-                        console.log(value)
+                       
                         _.capitalize(value)
+                         console.log(value)
                     });
                     // subcategories = _.capitalize(subcategories)
                     
