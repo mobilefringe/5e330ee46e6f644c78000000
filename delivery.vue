@@ -77,21 +77,49 @@
                                             <!--    <div class="store_tag_text">Curbside</div>-->
                                             <!--</div>-->
                                             
-                                            <div class=v-if="store.delivery_store && store.takeout_store && store.curbside_store">
-                                                <div class="store_tag position_one" v-if="store.delivery_store">
+                                            <div v-if="store.delivery_store && !store.takeout_store && !store.curbside_store">
+                                                <div class="store_tag position_one">
                                                     <div class="store_tag_text">Delivery</div>
                                                 </div>
                                                 
-                                                <div class="store_tag position_two" v-if="store.takeout_store">
-                                                    <div class="store_tag_text">Take Out</div>
-                                                </div>
-                                                <div class="store_tag position_three" v-if="store.curbside_store">
-                                                    <div class="store_tag_text">Curbside</div>
+                                            </div>
+                                            
+                                            <div v-if="store.delivery_store && store.takeout_store && !store.curbside_store">
+                                                <div class="store_tag position_one" >
+                                                    <div class="store_tag_text">Delivery</div>
                                                 </div>
                                                 
-                                                <div class="store_details">
-                                                    <div class="store_text"><h2>{{ store.name }}</h2></div>    
+                                                <div class="store_tag position_two" >
+                                                    <div class="store_tag_text">Take Out</div>
                                                 </div>
+                                            </div>
+                                            
+                                            <div v-if="store.delivery_store && !store.takeout_store && store.curbside_store">
+                                                <div class="store_tag position_one" >
+                                                    <div class="store_tag_text">Delivery</div>
+                                                </div>
+                                                
+                                                <div class="store_tag position_two" >
+                                                    <div class="store_tag_text">Curbside</div>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            <div v-if="store.delivery_store && store.takeout_store && store.curbside_store">
+                                                <div class="store_tag position_one" >
+                                                    <div class="store_tag_text">Delivery</div>
+                                                </div>
+                                                
+                                                <div class="store_tag position_two" >
+                                                    <div class="store_tag_text">Take Out</div>
+                                                </div>
+                                                <div class="store_tag position_three" >
+                                                    <div class="store_tag_text">Curbside</div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="store_details">
+                                                <div class="store_text"><h2>{{ store.name }}</h2></div>    
                                             </div>
                                             
                                         </router-link>
