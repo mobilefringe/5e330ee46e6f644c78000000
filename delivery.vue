@@ -75,15 +75,17 @@
                                             <!--    <div class="store_tag_text">New Store</div>-->
                                             <!--</div>-->
                                             
-                                            <div class="store_tag" v-if="store.takeout_store">
-                                                <div class="store_tag_text">Take Out</div>
-                                            </div>
-                                            <div class="store_tag" v-if="!store.takeout_store && store.curbside_store">
-                                                <div class="store_tag_text">Curbside</div>
-                                            </div>
-                                            <div class="store_tag" v-if="!store.takeout_store && !store.curbside_store && store.delivery_store">
+                                            <div class="store_tag" v-if="store.delivery_store">
                                                 <div class="store_tag_text">Delivery</div>
                                             </div>
+                                            
+                                            <div class="store_tag" v-if="!store.delivery_store && store.takeout_store">
+                                                <div class="store_tag_text">Take Out</div>
+                                            </div>
+                                            <div class="store_tag" v-if="!store.delivery_store &&  !store.takeout_store && store.curbside_store">
+                                                <div class="store_tag_text">Curbside</div>
+                                            </div>
+                                            
                                             <div class="store_details">
                                                 <div class="store_text"><h2>{{ store.name }}</h2></div>    
                                             </div>
@@ -186,7 +188,12 @@
                             }
                             
                    
-                            
+                            // Check if Delivery 
+                            if (_.includes(value.categories, 9376)){
+                              value.delivery_store = true
+                            } else {
+                              value.delivery_store = false
+                            }
                             // Check if Take Out
                             if (_.includes(value.tags, 'Take Out')){
                               value.takeout_store = true
@@ -199,16 +206,7 @@
                             } else {
                               value.curbside_store = false
                             }
-                            // Check if Delivery 
-                            if (_.includes(value.categories, 9376)){
-                              value.delivery_store = true
-                            } else {
-                              value.delivery_store = false
-                            }
-                            
                             console.log(value)
-                            
-                            
                             
                             store_list.push(value);
                         }
