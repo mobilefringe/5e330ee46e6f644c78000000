@@ -190,13 +190,15 @@
                     subcategories = _.filter(subcategories, function(o) { return o.store_ids !== null});
                     
                     console.log(subcategories)
+                    _.forEach(subcategories, function(value, key) {
+                        value.name = _.capitalize(value.name)
+                       
+                    });
+                    c
                     
                     subcategories = _.map(subcategories, 'name').sort();
                     
-                    _.forEach(subcategories, function(value, key) {
-                        _.capitalize(value)
-                         console.log(value)
-                    });
+             
                     // subcategories = _.capitalize(subcategories)
                     
 
