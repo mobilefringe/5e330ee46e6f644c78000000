@@ -182,7 +182,7 @@
                 },
                 dropDownCats() {
                     var vm = this;
-                    var delivery_cat =  _.find(this.processedCategories, function(o) { return o.name == "Delivery"});
+                    var delivery_cat =  _.find(this.processedCategories, function(o) { return _.toUpper(o.name) == "Delivery"});
                     console.log(this.processedCategories, delivery_cat)
                     var subcategories = [];
                     if (delivery_cat !== null && delivery_cat !== undefined) {
