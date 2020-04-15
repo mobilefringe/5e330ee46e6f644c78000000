@@ -75,13 +75,13 @@
                                             <!--    <div class="store_tag_text">New Store</div>-->
                                             <!--</div>-->
                                             
-                                            <div class="store_tag" v-if="store.total_published_promos">
+                                            <div class="store_tag" v-if="store.takeout_store">
                                                 <div class="store_tag_text">Take Out</div>
                                             </div>
-                                            <div class="store_tag" v-if="!store.total_published_promos && !store.is_new_store && store.is_coming_soon_store">
+                                            <div class="store_tag" v-if="!store.takeout_store && store.curbside_store">
                                                 <div class="store_tag_text">Curbside</div>
                                             </div>
-                                            <div class="store_tag" v-if="!store.total_published_promos && !store.is_coming_soon_store && store.is_new_store">
+                                            <div class="store_tag" v-if="!store.takeout_store && !store.curbside_store && store.delivery_store">
                                                 <div class="store_tag_text">Delivery</div>
                                             </div>
                                             <div class="store_details">
