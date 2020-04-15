@@ -65,14 +65,15 @@
                                                     <div class="store_text"><h2>{{ store.name }}</h2></div>
                                                 </div>
                                             </div>
-                                            <div class="store_tag" v-if="store.delivery_store">
+                                            
+                                            <div class="store_tag" v-if="store.delivery_store && !store.takeout_store && !store.curbside_store">
                                                 <div class="store_tag_text">Delivery</div>
                                             </div>
                                             
-                                            <div class="store_tag" v-if="store.delivery_store && store.takeout_store">
+                                            <div class="store_tag" v-if="store.takeout_store && !store.curbside_store">
                                                 <div class="store_tag_text">Take Out</div>
                                             </div>
-                                            <div class="store_tag" v-if="!store.delivery_store &&  !store.takeout_store && store.curbside_store">
+                                            <div class="store_tag" v-if="store.curbside_store">
                                                 <div class="store_tag_text">Curbside</div>
                                             </div>
                                             
