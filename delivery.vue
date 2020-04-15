@@ -263,6 +263,6 @@
 
 <style scoped>
     .dropdown-menu li a {
-        text-transform: lowercase;
+        text-transform: lowercase !important;
     }
 </style>
