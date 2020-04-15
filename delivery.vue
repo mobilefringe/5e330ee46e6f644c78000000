@@ -262,7 +262,7 @@
 </script>
 
 <style scoped>
-    .dropdown-menu li a {
+    .dropdown-menu li {
         text-transform: lowercase !important;
     }
 </style>
