@@ -65,14 +65,24 @@
                                                     <div class="store_text"><h2>{{ store.name }}</h2></div>
                                                 </div>
                                             </div>
+                                            <!--<div class="store_tag" v-if="store.total_published_promos">-->
+                                            <!--    <div class="store_tag_text">Promotion</div>-->
+                                            <!--</div>-->
+                                            <!--<div class="store_tag" v-if="!store.total_published_promos && !store.is_new_store && store.is_coming_soon_store">-->
+                                            <!--    <div class="store_tag_text">Coming Soon</div>-->
+                                            <!--</div>-->
+                                            <!--<div class="store_tag" v-if="!store.total_published_promos && !store.is_coming_soon_store && store.is_new_store">-->
+                                            <!--    <div class="store_tag_text">New Store</div>-->
+                                            <!--</div>-->
+                                            
                                             <div class="store_tag" v-if="store.total_published_promos">
-                                                <div class="store_tag_text">Promotion</div>
+                                                <div class="store_tag_text">Take Out</div>
                                             </div>
                                             <div class="store_tag" v-if="!store.total_published_promos && !store.is_new_store && store.is_coming_soon_store">
-                                                <div class="store_tag_text">Coming Soon</div>
+                                                <div class="store_tag_text">Curbside</div>
                                             </div>
                                             <div class="store_tag" v-if="!store.total_published_promos && !store.is_coming_soon_store && store.is_new_store">
-                                                <div class="store_tag_text">New Store</div>
+                                                <div class="store_tag_text">Delivery</div>
                                             </div>
                                             <div class="store_details">
                                                 <div class="store_text"><h2>{{ store.name }}</h2></div>    
@@ -174,9 +184,36 @@
                             if (_.includes(value.image_url, 'missing')) {
                                 value.image_url = vm.property.default_logo;
                             }
+                            
+                   
+                            
+                            // Check if Take Out
+                            if (_.includes(value.tags, 'Take Out')){
+                              value.takeout_store = true
+                            } else {
+                              value.takeout_store = false
+                            }
+                            // Check if Curbside
+                            if (_.includes(value.tags, 'Curbside')){
+                              value.curbside_store = true
+                            } else {
+                              value.curbside_store = false
+                            }
+                            // Check if Delivery 
+                            if (_.includes(value.tags, 'Delivery')){
+                              value.delivery_store = true
+                            } else {
+                              value.delivery_store = false
+                            }
+                            
+                            
+                            
                             store_list.push(value);
                         }
                     });
+                    
+                    
+                    
                     this.filteredStores = store_list;
                     return store_list
                 },
