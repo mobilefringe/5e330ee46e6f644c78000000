@@ -200,7 +200,7 @@
                               value.curbside_store = false
                             }
                             // Check if Delivery 
-                            if (_.includes(value.tags, 'Delivery')){
+                            if (_.includes(value.categories, this.deliveryFilter)){
                               value.delivery_store = true
                             } else {
                               value.delivery_store = false
