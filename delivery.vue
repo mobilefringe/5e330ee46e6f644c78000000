@@ -66,11 +66,23 @@
                                                 </div>
                                             </div>
                                             
-                                           <div v-if="store.delivery_store && !store.takeout_store && !store.curbside_store">
+                                            
+                                            <div v-if="store.delivery_store && !store.takeout_store && !store.curbside_store">
                                                 <div class="store_tag position_one">
                                                     <div class="store_tag_text">Delivery</div>
                                                 </div>
-                                                
+                                            </div>
+                                            
+                                            <div v-if="store.takeout_store && !store.delivery_store && !store.curbside_store">
+                                                <div class="store_tag position_one">
+                                                    <div class="store_tag_text">Take Out</div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div v-if="store.curbside_store && !store.delivery_store && !store.takeout_store">
+                                                <div class="store_tag position_one">
+                                                    <div class="store_tag_text">Curbside</div>
+                                                </div>
                                             </div>
                                             
                                             <div v-if="store.delivery_store && store.takeout_store && !store.curbside_store">
@@ -93,6 +105,16 @@
                                                 </div>
                                             </div>
                                             
+                                            <div v-if="!store.delivery_store && store.takeout_store && store.curbside_store">
+                                                <div class="store_tag position_one" >
+                                                    <div class="store_tag_text">Take Out</div>
+                                                </div>
+                                                
+                                                <div class="store_tag position_two" >
+                                                    <div class="store_tag_text">Curbside</div>
+                                                </div>
+                                            </div>
+                                            
                                             
                                             <div v-if="store.delivery_store && store.takeout_store && store.curbside_store">
                                                 <div class="store_tag position_one" >
@@ -106,6 +128,7 @@
                                                     <div class="store_tag_text">Curbside</div>
                                                 </div>
                                             </div>
+                                            
                                             
                                             <div class="store_details">
                                                 <div class="store_text"><h2>{{ store.name }}</h2></div>    
@@ -211,7 +234,7 @@
                             
                    
                             // Check if Delivery 
-                            if (_.includes(value.categories, vm.deliveryFilter)){
+                            if (_.includes(value.tags, 'Delivery')){
                               value.delivery_store = true
                             } else {
                               value.delivery_store = false
