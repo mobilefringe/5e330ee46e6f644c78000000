@@ -67,66 +67,73 @@
                                             </div>
                                             
                                             
-                                            <div v-if="store.delivery_store && !store.takeout_store && !store.curbside_store">
-                                                <div class="store_tag position_one">
-                                                    <div class="store_tag_text">Delivery</div>
-                                                </div>
-                                            </div>
+                                            <!--<div v-if="store.delivery_store && !store.takeout_store && !store.curbside_store">-->
+                                            <!--    <div class="store_tag position_one">-->
+                                            <!--        <div class="store_tag_text">Delivery</div>-->
+                                            <!--    </div>-->
+                                            <!--</div>-->
                                             
-                                            <div v-if="store.takeout_store && !store.delivery_store && !store.curbside_store">
-                                                <div class="store_tag position_one">
-                                                    <div class="store_tag_text">Take Out</div>
-                                                </div>
-                                            </div>
+                                            <!--<div v-if="store.takeout_store && !store.delivery_store && !store.curbside_store">-->
+                                            <!--    <div class="store_tag position_one">-->
+                                            <!--        <div class="store_tag_text">Take Out</div>-->
+                                            <!--    </div>-->
+                                            <!--</div>-->
                                             
-                                            <div v-if="store.curbside_store && !store.delivery_store && !store.takeout_store">
-                                                <div class="store_tag position_one">
-                                                    <div class="store_tag_text">Curbside</div>
-                                                </div>
-                                            </div>
+                                            <!--<div v-if="store.curbside_store && !store.delivery_store && !store.takeout_store">-->
+                                            <!--    <div class="store_tag position_one">-->
+                                            <!--        <div class="store_tag_text">Curbside</div>-->
+                                            <!--    </div>-->
+                                            <!--</div>-->
                                             
-                                            <div v-if="store.delivery_store && store.takeout_store && !store.curbside_store">
-                                                <div class="store_tag position_one" >
-                                                    <div class="store_tag_text">Delivery</div>
-                                                </div>
+                                            <!--<div v-if="store.delivery_store && store.takeout_store && !store.curbside_store">-->
+                                            <!--    <div class="store_tag position_one" >-->
+                                            <!--        <div class="store_tag_text">Delivery</div>-->
+                                            <!--    </div>-->
                                                 
-                                                <div class="store_tag position_two" >
-                                                    <div class="store_tag_text">Take Out</div>
-                                                </div>
-                                            </div>
+                                            <!--    <div class="store_tag position_two" >-->
+                                            <!--        <div class="store_tag_text">Take Out</div>-->
+                                            <!--    </div>-->
+                                            <!--</div>-->
                                             
-                                            <div v-if="store.delivery_store && !store.takeout_store && store.curbside_store">
-                                                <div class="store_tag position_one" >
-                                                    <div class="store_tag_text">Delivery</div>
-                                                </div>
+                                            <!--<div v-if="store.delivery_store && !store.takeout_store && store.curbside_store">-->
+                                            <!--    <div class="store_tag position_one" >-->
+                                            <!--        <div class="store_tag_text">Delivery</div>-->
+                                            <!--    </div>-->
                                                 
-                                                <div class="store_tag position_two" >
-                                                    <div class="store_tag_text">Curbside</div>
-                                                </div>
-                                            </div>
+                                            <!--    <div class="store_tag position_two" >-->
+                                            <!--        <div class="store_tag_text">Curbside</div>-->
+                                            <!--    </div>-->
+                                            <!--</div>-->
                                             
-                                            <div v-if="!store.delivery_store && store.takeout_store && store.curbside_store">
-                                                <div class="store_tag position_one" >
-                                                    <div class="store_tag_text">Take Out</div>
-                                                </div>
+                                            <!--<div v-if="!store.delivery_store && store.takeout_store && store.curbside_store">-->
+                                            <!--    <div class="store_tag position_one" >-->
+                                            <!--        <div class="store_tag_text">Take Out</div>-->
+                                            <!--    </div>-->
                                                 
-                                                <div class="store_tag position_two" >
-                                                    <div class="store_tag_text">Curbside</div>
-                                                </div>
-                                            </div>
+                                            <!--    <div class="store_tag position_two" >-->
+                                            <!--        <div class="store_tag_text">Curbside</div>-->
+                                            <!--    </div>-->
+                                            <!--</div>-->
                                             
                                             
-                                            <div v-if="store.delivery_store && store.takeout_store && store.curbside_store">
-                                                <div class="store_tag position_one" >
-                                                    <div class="store_tag_text">Delivery</div>
-                                                </div>
+                                            <!--<div v-if="store.delivery_store && store.takeout_store && store.curbside_store">-->
+                                            <!--    <div class="store_tag position_one" >-->
+                                            <!--        <div class="store_tag_text">Delivery</div>-->
+                                            <!--    </div>-->
                                                 
-                                                <div class="store_tag position_two" >
-                                                    <div class="store_tag_text">Take Out</div>
-                                                </div>
-                                                <div class="store_tag position_three" >
-                                                    <div class="store_tag_text">Curbside</div>
-                                                </div>
+                                            <!--    <div class="store_tag position_two" >-->
+                                            <!--        <div class="store_tag_text">Take Out</div>-->
+                                            <!--    </div>-->
+                                            <!--    <div class="store_tag position_three" >-->
+                                            <!--        <div class="store_tag_text">Curbside</div>-->
+                                            <!--    </div>-->
+                                            <!--</div>-->
+                                            <div v-if="store.tags">
+            								    <div>
+            								        <div class="store_tag" v-for="(tag, index) in store.tags" v-if="index < 3">
+                                                        <div class="store_tag_text">{{ tag }}</div>
+                                                    </div>
+            								    </div>
                                             </div>
                                             
                                             
@@ -234,24 +241,24 @@
                             
                    
                             // Check if Delivery 
-                            if (_.includes(value.tags, 'Delivery')){
-                              value.delivery_store = true
-                            } else {
-                              value.delivery_store = false
-                            }
-                            // Check if Take Out
-                            if (_.includes(value.tags, 'Take Out')){
-                              value.takeout_store = true
-                            } else {
-                              value.takeout_store = false
-                            }
-                            // Check if Curbside
-                            if (_.includes(value.tags, 'Curbside')){
-                              value.curbside_store = true
-                            } else {
-                              value.curbside_store = false
-                            }
-                            console.log(value)
+                            // if (_.includes(value.tags, 'Delivery')){
+                            //   value.delivery_store = true
+                            // } else {
+                            //   value.delivery_store = false
+                            // }
+                            // // Check if Take Out
+                            // if (_.includes(value.tags, 'Take Out')){
+                            //   value.takeout_store = true
+                            // } else {
+                            //   value.takeout_store = false
+                            // }
+                            // // Check if Curbside
+                            // if (_.includes(value.tags, 'Curbside')){
+                            //   value.curbside_store = true
+                            // } else {
+                            //   value.curbside_store = false
+                            // }
+                            // console.log(value)
                             
                             store_list.push(value);
                         }
