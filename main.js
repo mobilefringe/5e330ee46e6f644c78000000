@@ -15,7 +15,7 @@ require.config({
         'text': 'https://cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text.min',
         'json': 'https://unpkg.com/requirejs-plugins-current@1.0.3/src/json',
         'js-cookie': 'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min',
-        'vue-meta': 'https://unpkg.com/vue-meta@1.0.4/lib/vue-meta.min',
+        'vue-head': 'https://cdn.rawgit.com/ktquez/vue-head/master/vue-head',
         'Fuse': 'https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min',
         'datastore_mutation_types': 'https://mmvue.codecloudapp.com/datastore_mutation_types',
         'datastore_getters': 'https://mmvue.codecloudapp.com/datastore_getters',
