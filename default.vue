@@ -3,7 +3,8 @@
 </template>
 
 <script>
-    define(["Vue"], function(Vue) {
+    define(["Vue", "vue-meta"], function(Vue, Meta) {
+        Vue.use(Meta);
         return Vue.component("default-component", {
             template: template, // the variable template will be injected
             head: {
@@ -38,12 +39,10 @@
                 next(vm => {
                     // access to component instance via `vm`
                     vm.meta = vm.findMetaDataByPath(to.path);
-                    vm.$emit('updateHead')
                 });
             },
             beforeRouteUpdate (to, from, next) {
                 this.meta = this.findMetaDataByPath(to.path);
-                this.$emit('updateHead')
                 next();
             },
             computed: {
