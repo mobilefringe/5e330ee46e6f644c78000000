@@ -111,8 +111,6 @@
     define(["Vue", "vuex", "vue-meta", "vue!vue-slick", "moment", "moment-timezone", "vue-moment", "vue!welcome_msg", "json!site.json"], function (Vue, Vuex, meta, slick, moment, tz, VueMoment, welcomeMessage, siteInfo) {
         return Vue.component("home-component", {
             template: template, // the variable template will be injected
-            
-            
             // head: {
             //     // To use "this" in the component, it is necessary to return the object through a function
             //     title: function () {
@@ -131,7 +129,6 @@
             //       ]
             //     }
             // },
-            
             data: function() {
                 return {
                     dataLoaded: false,
@@ -202,7 +199,6 @@
                     });
                     
                     this.meta = this.findMetaDataByPath(this.$route.path);
-                    // this.$emit('updateHead')
                     }
                     this.dataLoaded = true;  
                 });
@@ -309,7 +305,6 @@
                     });
                     var feature_items = _.concat(promotions, events)
                     feature_items = _.orderBy(feature_items, function(o) { return o.feature_item_index });
-
                     return feature_items
                 }
             },
@@ -338,7 +333,18 @@
                     }
                 }
             },
-            
+            metaInfo () {
+                return {
+                    title: this.meta.meta_title,
+                    meta: [
+                        { name: 'description', vmid: 'description', content: this.meta.meta_description },
+                        { name: 'keywords',  vmid: 'keywords', content: this.meta.meta_keywords },
+                        { property: 'og:title', vmid: 'og:title', content: this.meta.meta_title },
+                        { property: 'og:description', vmid: 'og:description', content: this.meta.meta_description },
+                        { property: 'og:image', vmid: 'og:image', content: this.meta.meta_image }
+                    ]
+                }
+            }
         });
     })
 </script>
