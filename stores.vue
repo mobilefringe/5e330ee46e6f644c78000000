@@ -192,7 +192,7 @@
                     var store_list = [];
                     var vm = this;
                     _.forEach(this.processedStores, function(value, key) {
-                        console.log("webiste", store.website)
+                        console.log("webiste", value.website)
                         if (_.includes(value.image_url, 'missing')) {
                             value.no_store_logo = true;
                         } else {
